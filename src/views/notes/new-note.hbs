@@ -1,0 +1,35 @@
+{{#each errors}}
+  <div class="alert alert-light" role="alert">
+    {{text}}
+  </div>
+{{/each}}
+<div class="col-md-4 mx-auto">
+  <div class="card">
+    <div class="card-header">
+      <h1>New note</h1>
+    </div>
+    <div class="card-body">
+      <form action="/notes/new-note" method="POST">
+        <div class="form-group">
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Title"
+            name="title"
+            autofocus
+          />
+        </div>
+        <div class="form-group mt-3">
+          <textarea
+            name="description"
+            class="form-control"
+            placeholder="Description"
+          ></textarea>
+        </div>
+        <div class="form-group mt-3">
+          <button class="btn btn-primary w-100" type="submit">Save</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
